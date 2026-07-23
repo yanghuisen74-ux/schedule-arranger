@@ -1,0 +1,16 @@
+{
+  "name": "schedule-arranger",
+  "version": "1.0.0",
+  "description": "スケジュール管理用のアプリケーションです。",
+  "main": "src/app.js",
+  "author": "モリ",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "NODE_ENV=\"development\" node --watch src/server.js"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.2",
+    "hono": "4.7.10"
+  }
+}
