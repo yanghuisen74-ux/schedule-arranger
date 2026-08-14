@@ -2,3 +2,5 @@ node_modules/
 yarn.lock
 *.log
 .env
+public/javascripts/bundle.js
+public/stylesheets/bundle.css
