@@ -285,7 +285,7 @@ function isMine(userId, schedule) {
   return schedule && parseInt(schedule.createdBy, 10) === parseInt(userId, 10);
 }
 
-app.get('/:scheduleId/edit', scheduleFormValidator, async (c) => {
+app.get('/:scheduleId/edit', scheduleIdValidator, async (c) => {
   const { user } = c.get('session') ?? {};
   const schedule = await prisma.schedule.findUnique({
     where: { scheduleId: c.req.valid('param').scheduleId },

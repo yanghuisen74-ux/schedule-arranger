@@ -49,7 +49,7 @@ app.post(
     const { comment } = c.req.valid('json');
 
     const { user } = c.get('session') ?? {};
-    if (user?.id !== userId) {
+    if (Number(user?.id) !== userId) {
       return c.json({
         status: 'NG',
         errors: [{ msg: 'ユーザ ID が不正です。' }],
